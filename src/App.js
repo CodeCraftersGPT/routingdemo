@@ -7,6 +7,7 @@ import Navigation from './Routing/Navigation';
 import Registration from './Registration';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Product from './Routing/Products';
+import Orders from './Routing/Order';
 
 
 
@@ -20,6 +21,9 @@ function App() {
                 <Route path="/about" element={<About/>}/>
                 {/* Define route for the product */}
                 <Route path="/product" element={<Product/>}/>
+                {/* Define route for the orders */}
+                <Route path="/orders" element={<Orders/>}/>
+                {/* Define route for the registration */}
                 {/* define redirect to Home if path does not match any */}
                 <Route path="*" element={<Home/>}/>
             </Routes>
