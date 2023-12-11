@@ -1,0 +1,10 @@
+.pending {
+    background-color: blue;
+    color: white;
+}
+
+.active {
+ 
+    background-color: yellow;
+    color: black;
+}
