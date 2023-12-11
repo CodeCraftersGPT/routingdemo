@@ -11,14 +11,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   return (
    <div>
-    <Registration/>
-        {/* <Router>
+        <Router>
             <Navigation/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
             </Routes>
-        </Router> */}
+        </Router>
 
    </div>
   );
