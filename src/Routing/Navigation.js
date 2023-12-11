@@ -18,6 +18,10 @@ const Navigation = () => {
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><NavLink to="/about" className={appliedClass}>About</NavLink></li>
+                <li><NavLink to="/product" className={appliedClass}>Product</NavLink></li>
+                <li><NavLink to="/orders" className={appliedClass}>Orders</NavLink></li>
+                
+
             </ul>
         </div>
     );
