@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 // import useNavigate hook
 import { useNavigate } from 'react-router-dom';
 
@@ -38,7 +39,7 @@ const Product = () => {
             <ul>
                 {products.map((product) => (
                     <li key={product.id}>
-                        {product.name} - ${product.price}
+                         <Link to={`/product/${product.id}`}>{product.name}</Link>
                     </li>
                 ))}
             </ul>
