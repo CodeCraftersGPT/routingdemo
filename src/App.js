@@ -19,12 +19,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/about" element={<About/>}/>
-                {/* Define route for the product */}
-                <Route path="/product" element={<Product/>}/>
-                {/* Define route for the orders */}
                 <Route path="/orders" element={<Orders/>}/>
-                {/* Define route for the registration */}
-                {/* define redirect to Home if path does not match any */}
+                <Route path="/products" element={<Product/>}/>
                 <Route path="*" element={<Home/>}/>
             </Routes>
         </Router>
