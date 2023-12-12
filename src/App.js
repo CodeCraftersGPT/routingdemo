@@ -8,8 +8,7 @@ import Registration from './Registration';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Product from './Routing/Products';
 import Orders from './Routing/Order';
-
-
+import ProductDetail from './Routing/ProductDetail';
 
 function App() {
   return (
@@ -21,6 +20,8 @@ function App() {
                 <Route path="/about" element={<About/>}/>
                 <Route path="/orders" element={<Orders/>}/>
                 <Route path="/products" element={<Product/>}/>
+                {/* define route for the product details with product/:id */}
+                <Route path="/product/:id" element={<ProductDetail/>}/>
                 <Route path="*" element={<Home/>}/>
             </Routes>
         </Router>
