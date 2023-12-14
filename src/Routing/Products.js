@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// import useNavigate hook
-import { useNavigate } from 'react-router-dom';
+// import useNavigate from 'react-router-dom';
+import { Link, useNavigate,useLocation, Outlet } from 'react-router-dom';
+
 
 const products = [
     { id: 1, name: 'Product 1', price: 10 },
@@ -11,38 +11,42 @@ const products = [
 
 const Product = () => {
 
-    // define function to navigate to the orders
     const navigate = useNavigate();
-
-
+   
 
     const navigateToOrders = () => {
-        // navigate to the orders
-        // use react-router-dom navigate function to navigate to the orders
-        // use the navigate function from useNavigate hook
-        // import useNavigate hook
-        // import { useNavigate } from 'react-router-dom';
-        // use the hook
-        // const navigate = useNavigate();
-        // call the navigate function
-        // navigate('/orders');
-
         navigate('/orders');
-
-    }
+        console.log("Navigate to orders");  
+        // Navigate to Orders Page
+    };
 
     return (
         <div>
             <h2>Products</h2>
-            {/* define button to navigate to the orders */}
-            <button onClick={navigateToOrders}>Orders</button>
+            <div>
+                <ul>
+                    <li>
+                        <Link to="/product/featuredproducts">featured products</Link>
+                    </li>
+                    <li>
+                        <Link to="/product/newproducts">new products</Link>
+                    </li>
+                   
+                </ul>
+            </div>
             <ul>
                 {products.map((product) => (
                     <li key={product.id}>
-                         <Link to={`/product/${product.id}`}>{product.name}</Link>
+                        <Link to={`/product/${product.id}?price=${product.price}`}> {product.name} - {product.price}</Link>
                     </li>
                 ))}
             </ul>
+            <div>
+                <button onClick={navigateToOrders}>Navigate To Orders</button>
+            </div>
+            <div>
+               <Outlet />
+                </div>
         </div>
     );
 };
